@@ -19,7 +19,9 @@ class RestaurantTests {
     @Test
     public void information(){
         Restaurant restaurant = new Restaurant(1004L, "Bob zip", "Seoul");
-        assertThat(restaurant.getInformation(), is("Bob zip in Seoul"));
+
+        MenuItem menuItem = restaurant.getMenuItems().get(0);
+        assertThat(menuItem.getName(), is("Kimchi"));
     }
 
 }
